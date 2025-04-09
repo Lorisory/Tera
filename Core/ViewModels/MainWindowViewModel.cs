@@ -10,7 +10,7 @@ namespace Core.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
-        private string titleOfApp = "Tera";
+        private string titleOfApp = "Terarium";
         public string TitleOfApp
         {
             get { return titleOfApp; }

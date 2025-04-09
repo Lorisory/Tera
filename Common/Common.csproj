@@ -1,23 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-	<ItemGroup>
-    <Compile Remove="Classes\**" />
-    <EmbeddedResource Remove="Classes\**" />
-    <None Remove="Classes\**" />
+  <ItemGroup>
+    <None Remove="Images\VenumIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Icons\VenumIcon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Icons\VenumIcon.ico">
+    <Resource Include="Images\VenumIcon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
