@@ -1,12 +1,10 @@
 ﻿using Prism.Ioc;
 using Core.Views;
 using System.Windows;
+using Prism.Modularity;
 
 namespace Core
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App
     {
         protected override Window CreateShell()
@@ -18,5 +16,16 @@ namespace Core
         {
 
         }
+
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            base.ConfigureModuleCatalog(moduleCatalog);
+
+            // Registrace modulu
+            moduleCatalog.AddModule<CoreModule>();
+        }
+
+
+
     }
 }

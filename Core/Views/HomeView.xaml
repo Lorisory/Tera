@@ -1,0 +1,309 @@
+﻿<UserControl x:Class="Core.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Core.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+    <UserControl.Resources>
+
+        <Style x:Key="CategoryBorderTitleStyle"
+               TargetType="Border">
+            <Setter Property="BorderThickness"
+                    Value="2 2 2 0" />
+            <Setter Property="BorderBrush"
+                    Value="White" />
+            <Setter Property="Background"
+                    Value="#bbbbbb" />
+        </Style>
+
+        <Style x:Key="CategoryTextBlockTitleStyle"
+               TargetType="TextBlock">
+            <Setter Property="Margin"
+                    Value="10 0 0 0" />
+            <Setter Property="FontSize"
+                    Value="20" />
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Left" />
+        </Style>
+
+        <Style x:Key="ParameterBorderStyle"
+               TargetType="Border"
+               BasedOn="{StaticResource CategoryBorderTitleStyle}">
+            <Setter Property="Background"
+                    Value="#f3f3f3" />
+            <Setter Property="BorderThickness"
+                    Value="2 2 0 0" />
+        </Style>
+
+        <Style x:Key="ParameterTitleTextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="Margin"
+                    Value="20 0 0 0" />
+            <Setter Property="FontSize"
+                    Value="16" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Left" />
+        </Style>
+
+        <Style x:Key="ParameterValueBorderStyle"
+               TargetType="Border"
+               BasedOn="{StaticResource CategoryBorderTitleStyle}">
+            <Setter Property="Background"
+                    Value="#f3f3f3" />
+            <Setter Property="BorderThickness"
+                    Value="2 2 2 0" />
+        </Style>
+
+        <Style x:Key="ParameterValueTextBlockStyle"
+               TargetType="TextBlock"
+               BasedOn="{StaticResource ParameterTitleTextBlockStyle}">
+            <Setter Property="Margin"
+                    Value="0 0 0 0" />
+        </Style>
+
+        <Style x:Key="ParameterUnitTextBlockStyle"
+               TargetType="TextBlock"
+               BasedOn="{StaticResource ParameterValueTextBlockStyle}">
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource CategoryBorderTitleStyle}">
+                    <TextBlock Text="Temperature's"
+                               Style="{StaticResource CategoryTextBlockTitleStyle}" />
+            </Border>
+
+            <Border Grid.Row="1"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                <TextBlock Text="teplota 1"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="1"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Stretch">
+                    <TextBlock Text="20"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                    <TextBlock Text="°C"
+                               Style="{StaticResource ParameterUnitTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="2"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="teplota 2"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="2"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="26"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                    <TextBlock Text="°C"
+                               Style="{StaticResource ParameterUnitTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="3"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="teplota 3"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="3"
+                    Grid.Column="1"
+                    VerticalAlignment="Stretch"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="32"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                    <TextBlock Text="°C"
+                               Style="{StaticResource ParameterUnitTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="4"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="teplota 4"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="4"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="18"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                    <TextBlock Text="°C"
+                               Style="{StaticResource ParameterUnitTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource CategoryBorderTitleStyle}">
+                <TextBlock Text="Humidity"
+                           Style="{StaticResource CategoryTextBlockTitleStyle}" />
+            </Border>
+
+            <Border Grid.Row="6"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="Humidity"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="6"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="70"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                    <TextBlock Text="%"
+                               Style="{StaticResource ParameterUnitTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="7"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource CategoryBorderTitleStyle}">
+                <TextBlock Text="Actuator's"
+                           Style="{StaticResource CategoryTextBlockTitleStyle}" />
+            </Border>
+
+            <Border Grid.Row="8"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="Light's"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="8"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="On"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="9"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="Heating"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="9"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="On"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="10"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="Cooling"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="10"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="On"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="11"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="Day/Night mode"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="11"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="Day"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="12"
+                    Grid.Column="0"
+                    BorderThickness="2 2 0 2"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="Alarm"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="12"
+                    Grid.Column="1"
+                    BorderThickness="2 2 2 2"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="On"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                </StackPanel>
+            </Border>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -6,22 +6,32 @@
         xmlns:common="clr-namespace:Common;assembly=Common"
         WindowStyle="SingleBorderWindow"
         ResizeMode="CanResizeWithGrip"
-        AllowsTransparency="False"
         Background="Transparent"
         Title="{Binding TitleOfApp}"
         Width="1200"
         Height="800">
 
-    <Grid ShowGridLines="True"
-          Background="Transparent">
+    <Grid Background="#f3f3f3">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
+
+        <ItemsControl Grid.Row="0"
+                      prism:RegionManager.RegionName="MainTabbarRegion">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+
+        <ContentControl Grid.Row="1"
+                        prism:RegionManager.RegionName="MainContentRegion" />
     </Grid>
 
 </Window>
