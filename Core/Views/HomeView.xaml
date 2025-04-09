@@ -72,16 +72,17 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid Margin="10">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="500" />
+            <ColumnDefinition Width="20"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Grid>
+        <Grid VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -98,6 +99,8 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
@@ -107,8 +110,8 @@
             <Border Grid.Row="0"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource CategoryBorderTitleStyle}">
-                    <TextBlock Text="Temperature's"
-                               Style="{StaticResource CategoryTextBlockTitleStyle}" />
+                <TextBlock Text="Temperature's"
+                           Style="{StaticResource CategoryTextBlockTitleStyle}" />
             </Border>
 
             <Border Grid.Row="1"
@@ -303,7 +306,35 @@
                 </StackPanel>
             </Border>
 
+
+            <Border Grid.Row="13"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource CategoryBorderTitleStyle}">
+                <TextBlock Text="Status"
+                           Style="{StaticResource CategoryTextBlockTitleStyle}" />
+            </Border>
+
+            <Border Grid.Row="14"
+                    Grid.Column="0"
+                    Style="{StaticResource ParameterBorderStyle}">
+                <TextBlock Text="Last update"
+                           Style="{StaticResource ParameterTitleTextBlockStyle}" />
+            </Border>
+            <Border Grid.Row="14"
+                    Grid.Column="1"
+                    Style="{StaticResource ParameterValueBorderStyle}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <TextBlock Text="19:52 9.4 2025"
+                               Style="{StaticResource ParameterValueTextBlockStyle}" />
+                </StackPanel>
+            </Border>
         </Grid>
+
+        <Image Grid.Row="0"
+               Grid.Column="2"
+               Margin="20 0 0 0"
+               Source="/Common;component/Images/tera0.jpeg" />
 
     </Grid>
 </UserControl>

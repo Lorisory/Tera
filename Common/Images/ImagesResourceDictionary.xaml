@@ -3,6 +3,8 @@
 
     <BitmapImage x:Key="AppLogo"
                  UriSource="../Images/VenumIcon.png" />
+    <BitmapImage x:Key="Tera"
+                 UriSource="../Images/tera0.jpeg" />
     <!--UriSource="pack://application:,,,/Common;component/Images/VenumIcon.png"-->
     
 </ResourceDictionary>

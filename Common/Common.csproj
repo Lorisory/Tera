@@ -8,10 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\tera0.jpeg" />
     <None Remove="Images\VenumIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\tera0.jpeg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\VenumIcon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
